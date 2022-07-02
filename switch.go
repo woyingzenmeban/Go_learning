@@ -14,8 +14,10 @@ func main() {
 		fmt.Println("you head further up the mountain")
 	case "enter cave", "go inside":				//必须完全匹配变量内容
 		fmt.Println("you find yourself a adimly lit cavern.")
+		fallthrough
 	case "read sign":
 		fmt.Println("The sign reads 'No Minors'")
+		fmt.Println("Test")
 	default:
 		fmt.Println("Didn't quite get that")
 	}
