@@ -42,4 +42,5 @@ func main() {
 
 	fmt.Printf("%-17v %6v %11v %5v\n",company, day, Trip, price)
 	}
+
 }
