@@ -14,7 +14,7 @@ func main() {
 
 	leap := year%400 == 0 || (year%4 ==0 && year%100 != 0)
 
-	if leap  {
+/* 	if leap  {
 		switch month {
 		case 2:
 			daysInMonth = 29
@@ -28,7 +28,16 @@ func main() {
 			case 4,6,8,10:
 				daysInMonth = 30			
 			}
-		}		
+		}	 */	
+		switch month {
+		case 2:
+			daysInMonth = 28
+			if leap {
+				daysInMonth = 29
+			}
+		case 4,6,9,11:
+			daysInMonth = 30
+		}
 		
 		day := rand.Intn(daysInMonth) + 1
 		fmt.Printf("Rand year %d;	Rand month %d;	Rand day %d\n", year, month, day)
